@@ -78,12 +78,12 @@ const UserAccount = ({
           <Link href='/dashboard'>Dashboard</Link>
         </DropdownMenuItem>
 
-        <DropdownMenuItem asChild>
+        {/* <DropdownMenuItem asChild>
           <Link href='/pricing'>
             Upgrade{' '}
             <Gem className='text-pink-600 h-4 w-4 ml-1.5' />
           </Link>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
 
         <DropdownMenuSeparator />
 
