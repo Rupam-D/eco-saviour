@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { publicProcedure, router } from "./trpc";
+import { userSyncToDb } from "@/controllers/userSyncToDb";
 
 
 export const appRouter = router({
@@ -11,7 +12,7 @@ export const appRouter = router({
   }),
 
   // //1
-  // syncToDb: publicProcedure.query(userSyncToDb),
+  syncToDb: publicProcedure.query(userSyncToDb),
   // carbonCalculator: publicProcedure
   //   .input(
   //     z.object({
