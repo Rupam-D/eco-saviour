@@ -64,7 +64,7 @@ const Topbar = () => {
                     size: "sm",
                   })}>Sign In</LoginLink>
 
-                  <RegisterLink className={buttonVariants({ variant: 'default', size: "sm" })}>Started for Free <ArrowRightIcon className='ml-2 w-5 h-5' /></RegisterLink>
+                  <RegisterLink className={buttonVariants({ variant: 'default', size: "sm" })}>Start Build Better Futute Today <ArrowRightIcon className='ml-2 w-5 h-5' /></RegisterLink>
                 </div>
             }
           </div>

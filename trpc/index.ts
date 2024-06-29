@@ -1,7 +1,10 @@
 import { z } from "zod";
-import { publicProcedure, router } from "./trpc";
+import { privateProcedure, publicProcedure, router } from "./trpc";
 import { userSyncToDb } from "@/controllers/userSyncToDb";
 import { generateSuggetion } from "@/controllers/wasteManageMentSuggestion";
+import { getAllEvents } from "@/controllers/getAllEvents";
+import { registerEvent } from "@/controllers/registerEvent";
+
 
 
 export const appRouter = router({
@@ -20,18 +23,18 @@ export const appRouter = router({
     z.object({
       wasteType:z.string(),
     })
-  ).query(generateSuggetion)
+  ).query(generateSuggetion),
+
+  // 3
+  getEvents: publicProcedure.query(getAllEvents),
+  //4
+  eventRegister:privateProcedure.input(
+    z.object({
+      eventId:z.string()
+    })
+  ).mutation(registerEvent)
   
-  // carbonCalculator: publicProcedure
-  //   .input(
-  //     z.object({
-  //       dist: z.number(),
-  //       electricity: z.number(),
-  //       meals: z.number(),
-  //       waste: z.number(),
-  //     })
-  //   )
-  //   .query(() => calculateCarbonEmission),
+  
 });
 // export type definition of API
 export type AppRouter = typeof appRouter;

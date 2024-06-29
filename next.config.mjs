@@ -16,6 +16,22 @@ const nextConfig = {
             protocol: "https",
             hostname: "gravatar.com",
           },
+          {
+            protocol: "https",
+            hostname: "encrypted-tbn0.gstatic.com",
+          },
+          {
+            protocol: "https",
+            hostname:"as1.ftcdn.net"
+          },
+          {
+            protocol:"https",
+            hostname:"i.pinimg.com"
+          },
+          {
+            protocol:"https",
+            hostname:"d33wubrfki0l68.cloudfront.net"
+          }
         ],
       },
 };

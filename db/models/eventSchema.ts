@@ -1,33 +1,32 @@
 import mongoose from "mongoose";
-const userSchema = new mongoose.Schema(
+const eventSchema = new mongoose.Schema(
   {
-    _id: {
+    
+    eveName: {
       type: String,
-      unique: true,
-      required: true,
+      
     },
-    email: {
-      type: String,
-      unique: true,
-    },
-    name: {
+    eveDesc: {
       type: String,
       trim: true,
     },
-    img: {
+    eveImgUrl: {
       type: String,
     },
-    points: {
+    eveTags: 
+    [
+        {
+            type:String
+        }
+    ],
+    evePoints: {
       type: Number,
     },
-    wasteSchedule: {
-      type: String,
-    },
-    events:[
-      {
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Event"
-      }
+    participats:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"User"
+        }
     ]
     // allFiles: [
     //   {
@@ -45,4 +44,4 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export const User = mongoose.models.User || mongoose.model("User", userSchema);
+export const Event = mongoose.models.Event || mongoose.model("Event", eventSchema);
