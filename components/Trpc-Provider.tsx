@@ -9,7 +9,7 @@ const TrpcProvider = ({ children }: PropsWithChildren) => {
   const [queryClient] = useState(() => new QueryClient)
   const [trpcClient] = useState(() =>
     trpc_client.createClient({
-      links: [httpBatchLink({ url: `http://localhost:3000/api/trpc` })]
+      links: [httpBatchLink({ url: `https://eco-saviour-252m.vercel.app/api/trpc` })]
     }))
   return (
     <trpc_client.Provider client={trpcClient} queryClient={queryClient}>
