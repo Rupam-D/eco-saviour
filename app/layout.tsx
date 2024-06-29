@@ -5,6 +5,8 @@ import TrpcProvider from "@/components/Trpc-Provider";
 import { cn } from "@/lib/utils";
 import Topbar from "@/components/Topbar";
 import ChatStore from "@/context/chatcontext/store";
+import { Toaster } from "@/components/ui/toaster";
+import WasteImgContextStore from "@/context/wasteImgContext/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +25,12 @@ export default function RootLayout({
       <TrpcProvider>
       <body className={cn("bg-gray-100 min-h-screen", inter.className)}>
         <ChatStore>
+        <WasteImgContextStore>
           <Topbar />
           {children}
+          </WasteImgContextStore>
         </ChatStore>
+        <Toaster />
         </body>
 
       </TrpcProvider>

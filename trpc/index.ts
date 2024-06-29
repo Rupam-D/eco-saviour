@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { publicProcedure, router } from "./trpc";
 import { userSyncToDb } from "@/controllers/userSyncToDb";
+import { generateSuggetion } from "@/controllers/wasteManageMentSuggestion";
 
 
 export const appRouter = router({
@@ -13,6 +14,14 @@ export const appRouter = router({
 
   // //1
   syncToDb: publicProcedure.query(userSyncToDb),
+
+  // 2
+  suggestWasteManagement: publicProcedure.input(
+    z.object({
+      wasteType:z.string(),
+    })
+  ).query(generateSuggetion)
+  
   // carbonCalculator: publicProcedure
   //   .input(
   //     z.object({
