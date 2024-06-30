@@ -1,6 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EcoSaviour - Make World More Sustainable
 
-## Getting Started
+
+## Overview:
+Welcome to EcoSaviour, our web based application for embracing sustainability and making a positive impact on our planet. 
+At EcoSaviour, we're dedicated to educating and empowering users with practical tools and resources to adopt eco-friendly practices in their daily lives.
+
+### Key Features:
+#### 1.Carbon Emmision Calculator:
+
+We estimate your carbon footprint based on daily activities such as Daily communite Distance, Monthly electricity consuptions, number per meals per day, waste generation per week.
+
+Then, gain insights into how your lifestyle choices contribute to carbon emissions.
+
+User also receive personalized tips from our Ecobot on reducing carbon footprint.
+
+#### 2.Smart Waste Management:
+
+User can upload photos of your waste for AI-driven recycling recommendations.
+
+Schedule convenient doorstep waste pickups for larger quantities.
+
+Future plans include integrating with local municipalities for enhanced waste management.
+
+#### 3.Environmental Campaigns:
+
+In EcoSaviour, User can engage in impactful environmental initiatives like tree planting and recycling campaigns.
+
+Participate in community-driven activities to foster environmental stewardship
+
+## Setup Instructions
 
 First, run the development server:
 
@@ -16,21 +44,67 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Environment Variables
 
-## Learn More
+To run this project, you will need to add the following environment variables to your .env file
 
-To learn more about Next.js, take a look at the following resources:
+`OPENAI_API_KEY`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`UPLOADTHING_SECRET`
+`UPLOADTHING_APP_ID`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`KINDE_CLIENT_ID`
+`KINDE_CLIENT_SECRET`
+`KINDE_ISSUER_URL`
+`KINDE_SITE_URL`
+`KINDE_POST_LOGOUT_REDIRECT_URL`
+`KINDE_POST_LOGIN_REDIRECT_URL`
 
-## Deploy on Vercel
+`DB_URI`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Usage Instructions:
+
+### 1.Carbon Emission Calculator
+
+#### Purpose : 
+Estimate and manage your carbon footprint based on your daily activities.
+
+#### Step To Use : 
+Open the EcoSaviour app and navigate to the "Carbon Emission Calculator" section.
+
+Fill out the form with details about your daily activities such as transportation, energy consumption, and waste production.
+
+Submit the form to calculate your estimated carbon emissions per year.
+
+Receive personalized suggestions from our Ecobot on how to reduce your carbon footprint effectively.
+
+
+### 2.Smart Waste Management :
+
+#### Purpose : 
+Manage and dispose of waste responsibly through smart solutions.
+
+#### Using AI for Small Quantities: 
+Take a photo of your waste using the EcoSaviour app.
+
+The machine learning model will analyze the waste and provide recommendations on how to recycle or reduce it efficiently.
+
+#### Scheduling Waste Pickup for Larger Quantities:
+
+For larger quantities of waste, schedule a doorstep pickup through the EcoSaviour app.
+
+** Future updates aim to integrate municipal services for more streamlined waste management solutions.
+
+### 3.Environmental Campaigns :
+#### Purpose : 
+Participate in and contribute to environmental initiatives and campaigns.
+
+#### Engagement Opportunities:
+
+User can Stay informed about ongoing environmental campaigns within the EcoSaviour app.
+
+Participate in activities like tree planting, recycling drives, and community clean-ups to contribute to environmental conservation efforts.
+
+
